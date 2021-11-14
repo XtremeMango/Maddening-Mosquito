@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3c66a594f3d71418df84cd0433947e, type: 3}
+  m_Name: Lips
+  m_EditorClassIdentifier: 
+  location: Lips
+  pointValue: 60
+  annoyanceValue: 15
+  regenRate: 1
+  maxBlood: 9
