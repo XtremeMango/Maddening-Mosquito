@@ -72,5 +72,30 @@ public class UIEvents : MonoBehaviour
         OnUpdateAnnoyUI?.Invoke(val);
     }
 
+    public event Action OnButtonHover;
+    public void ButtonHover()
+    {
+        OnButtonHover?.Invoke();
+    }
+
+    public event Action OnButtonClick;
+    public void ButtonClick()
+    {
+        OnButtonClick?.Invoke();
+    }
+
+    public event Action<string> OnPlayGameUISound;
+    public void PlayGameUISound(string name)
+    {
+        OnPlayGameUISound?.Invoke(name);
+    }
+
+    public event Action<int> OnSuckGameAttempted;
+    public void SuckGameAttempted(int result)
+    {
+        OnSuckGameAttempted?.Invoke(result);
+    }
+    
+
 
 }

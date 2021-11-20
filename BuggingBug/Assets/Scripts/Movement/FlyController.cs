@@ -104,14 +104,6 @@ public class FlyController : MonoBehaviour
         {
             AddForceTowardsMouse();
             LookAtMouseDir();
-            if(Input.GetKeyDown(KeyCode.O))
-            {
-                Events.events.PlayerOutOfBlood();
-            }
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                Events.events.PlayerHit();
-            }
         }
     }
 
@@ -147,7 +139,7 @@ public class FlyController : MonoBehaviour
         Vector3 dir = GetDirFromPlayerToMouse_XY();
         if (dir.magnitude >= deadZone && flightControlActive)
         {
-            rb.AddForce(dir.normalized * force);
+            rb.AddForce(dir.normalized * force * Time.deltaTime);
         }
     }
 

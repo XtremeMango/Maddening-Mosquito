@@ -104,10 +104,21 @@ public class Events : MonoBehaviour
     }
 
     public event Action OnManClap;
-
     public void ManClap()
     {
         OnManClap?.Invoke();
+    }
+
+    public event Action<string> OnPlayManSound;
+    public void PlayManSound(string name)
+    {
+        OnPlayManSound?.Invoke(name);
+    }
+
+    public event Action<string> OnStopManSound;
+    public void StopManSound(string name)
+    {
+        OnStopManSound?.Invoke(name);
     }
 
 

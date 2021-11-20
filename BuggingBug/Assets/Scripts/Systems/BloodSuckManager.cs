@@ -63,10 +63,24 @@ public class BloodSuckManager : MonoBehaviour
                 {
                     if (Mathf.Abs(Mathf.DeltaAngle(180,currentAimVal)) <= pointDecayMultiplier[i].x)
                     {
-                        Debug.Log(Mathf.Abs(Mathf.DeltaAngle(180, currentAimVal)));
-                        Debug.Log(pointDecayMultiplier[i].x);
                         points = Mathf.Ceil(currentSection.data.pointValue * pointDecayMultiplier[i].y);
                         pointMultLevel = 3 - i;
+                        UIEvents.uiEvents.PlayGameUISound("Suck");
+                        UIEvents.uiEvents.SuckGameAttempted((int)pointMultLevel);
+                        switch (pointMultLevel)
+                        {
+                            case 3:
+                                UIEvents.uiEvents.PlayGameUISound("High");
+                                break;
+                            case 2:
+                                UIEvents.uiEvents.PlayGameUISound("Mid");
+                                break;
+                            case 1:
+                                UIEvents.uiEvents.PlayGameUISound("Low");
+                                break;
+                            default:
+                                break;
+                        }
                         break;
                     }
                 }

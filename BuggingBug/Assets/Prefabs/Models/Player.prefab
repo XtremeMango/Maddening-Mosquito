@@ -181,7 +181,7 @@ MonoBehaviour:
   dettachSpeed: 0.25
   attachEase: 9
   detachEase: 8
-  force: 10
+  force: 5000
   animationController: {fileID: 8073629831307024276}
 --- !u!54 &8073629831307024279
 Rigidbody:
@@ -214,6 +214,7 @@ MonoBehaviour:
   anim: {fileID: 1280439497013164265}
   rend: {fileID: 7960140108281377900}
   explode: {fileID: 1874745052402868202, guid: f13d3bccad360dd49b4711d7619d2866, type: 3}
+  titleMenu: 0
 --- !u!114 &311398467
 MonoBehaviour:
   m_ObjectHideFlags: 0
